@@ -57,7 +57,7 @@ var confusing = {
 // * Problem 1
 //whatIsThis('hello', 'world');
 // * "this" is a window object
-// * because 
+// * because I dont know
 
 
 
@@ -65,7 +65,7 @@ var confusing = {
 // * Problem 2
 //window.whatIsThis('hello', 'world');
 // * "this" is a window object 
-// * because ...
+// * because I dont know
 
 
 
@@ -97,7 +97,7 @@ var confusing = {
 // * Problem 6
 //whatIsThis.call();
 // * "this" is an object called Window.
-// * because ...
+// * because I dont know
 
 
 
@@ -105,7 +105,7 @@ var confusing = {
 // * Problem 7
 //whatIsThis.call(trickyTricky);
 // * "this" is an object called trickyTricky
-// * because ...
+// * because the function whatIsThis is calling the trickyTricky constructor.
 
 
 
@@ -113,7 +113,9 @@ var confusing = {
 // * Problem 8
 //whatIsThis.call(trickyTricky, 'nice', 'job');
 // * "this" is an object called trickyTricky.
-// * because ...
+// * because the function whatIsThis is calling the trickyTricky constructor.
+
+
 
 
 
@@ -121,7 +123,7 @@ var confusing = {
 // * Problem 9
 //whatIsThis.call(confusing);
 // * "this" is an object called confusing
-// * because ...
+// * because the function whatIsThis is calling the confusing constructor.
 
 
 
@@ -129,7 +131,8 @@ var confusing = {
 // * Problem 10
 //whatIsThis.call(confusing, 'hello');
 // * "this" is an object called confusing  
-// * because ...
+// * because the function whatIsThis is calling the confusing constructor.
+
 
 
 
@@ -137,70 +140,70 @@ var confusing = {
 // * Problem 11
 //whatIsThis.apply(trickyTricky);
 // * "this" is an object called trickyTricky
-// * because ...
+// * because the function whatIsThis is applying the trickyTricky constructor.
 
 
 
 
 // * Problem 12
 // whatIsThis.apply(confusing, ['nice', 'job']);
-// * "this" is ...
-// * because ...
+// * "this" is an object called confusing
+// * because the function whatIsThis is applying the confusing constructor
 
 
 
 
 // * Problem 13
-// whatIsThis.apply(confusing, 'nice', 'job');
-// * "this" is ...
+//whatIsThis.apply(confusing, 'nice', 'job');
+// * "this" is throwing an error
 // * because ...
 
 
 
 
 // * Problem 14
-// inAFunction('what will', 'happen?');
-// * "this" is ...
+//inAFunction('what will', 'happen?');
+// * "this" is a window object.  
 // * because ...
 
 
 
 
 // * Problem 15
-// inAFunction.test3('A', 'B');
-// * "this" is ...
-// * because ...
+//inAFunction.test3('A', 'B');
+// * "this" is throwing an error.
+// * because inAFunction.test3 is not a function
 
 
 
 
 // * Problem 16
-// var newObject = new inAFunction('what will', 'happen?');
-// * "this" is ...
-// * because ...
+//var newObject = new inAFunction('what will', 'happen?');
+// * "this" is a window object
+// * because I dont know.
 
 
 
 
 // * Problem 17
-// var newObject = new inAFunction('what will', 'happen?');
-// newObject.test3('C', 'D');
-// * "this" is ...
-// * because ...
+//var newObject = new inAFunction('what will', 'happen?');
+//newObject.test3('C', 'D');
+// * "this" is an object named Sally.  
+// * because a new inAFunction object is crated named Sally.
 
 
 
 
 // * Problem 18
-// inAnObject.test1.call(trickyTricky, 'face', 'book');
-// * "this" is ...
-// * because ...
+//inAnObject.test1.call(trickyTricky, 'face', 'book');
+// * "this" is an object called trickyTricky
+// * because the inAnObject object's method test1 is calling the constructor for a trickyTricky object.
 
 
 
 
 // * Problem 19
-// inAnObject.anotherObject.test2.apply(confusing, ['foo', 'bar']);
-// * "this" is ...
-// * because ...
+//inAnObject.anotherObject.test2.apply(confusing, ['foo', 'bar']);
+// * "this" is an object called confusting.
+// * because the inAnObject object is constructing anotherObject object and that is ... I dont know.  
 
